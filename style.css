@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*pad defauft hadi katkoun content-box, ka hanay kanmlola border-box hit hiya li afdal */
+    scroll-behavior: smooth; /*kayghayar xakl dyal scrolling dyal safha kaykhalih afdal (marin) */
+}
+
+header{
+    background-color: #f0f0f0;
+    height: 80px; /* Fixed height of header */
+    width: 100%;
+    position: fixed; /*3atkhalili header fixed mli 3an scroller f maw9i3*/
+    z-index: 999; /*mli nkoun kan scroller o katkhali lhaja li ltaht tb9a ltaht myjiwxi fo9 header , mli n scroller header yb9a bayn o makayji fo9 mno walo*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*kan centrer items vertically*/
+    padding: 10px 200px;
+    overflow: hidden; /* Prevents content from expanding header */
+}
+.logo{
+    height: 300px; /* Control logo size */
+    width: 300px; /* Maintain aspect ratio */
+}
+.navigation a{
+    text-decoration: none;
+    color: #378f9c;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: #601cfc;
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh; /*a9al haja hiya had 9ima walakin t9dar tzid ela hsab elements li kaynin*/
+    display: flex;
+    align-items: center;
+    background-image: url(assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;/*mli kat3ml scrol photo katb9a fixed*/
+}
+
+.main h2{
+    color: #378f9c;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.main p{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: #fff;
+    background-color: #378f9c;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block; /*aa0< kayt3tabar inline element fa makan9dax n3tih heigh wla padding wla margin*/
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: .7s ease;
+    
+}
+.main-btn:hover{
+    background-color: #0a49f6;
+    transform: scale(1.1);
+
+}
+.social-icons a{
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+/*************************services section******************************/
+.title{
+    display: flex;
+    justify-content: center;
+    color: #378f9c;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;/*ila bghit dok cards ykouno 9odam ba3tom 3mla row o ila bghit tji whda taht whda n3mlom column*/
+    flex-wrap: wrap;
+}
+.card{
+    background-color: #fff;
+    width: 20em;
+    box-shadow: 0 5px 25px rgba(1  1  1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: .7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    font-size: 4em;
+    text-align: center;
+}
+.icon1{
+    color: #1E90FF;
+}
+.icon2{
+    color: #6A0DAD;
+}
+.icon3{
+    color: #FFA500;
+}
+.icon4{
+    color: #008B8B;
+}
+.icon5{
+    color: #4B0082;
+}
+.icon6{
+    color: #228B22;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #378f9c;
+    font-size:1.2em ;
+    font-weight: 700;
+    margin: 10px;
+}
+.info p{
+    font-weight: 200;
+}
+.info ul li{
+    list-style-type: none;
+}
+
+.projects{
+    background-color: #000016;
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card{
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em; /*a9al height howa hada ya3ni y9dar ytzad ila tzadt xi haja, maxi fhal ila fina o 3mlna 3i height bouhda fa dik sa3a ila tzadt xi haja 3ayw9a3la oouverflow, fa nta ka element maghat9darx t7tawiha eliha kandiro min*/
+    width: 20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-img{
+    opacity: 0.9;
+}
+.project-img img{
+    width: 100%;
+    
+}
+.projects-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: #000;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: #3a6cf4;
+}
+.more-details:hover{
+    color: #601cfc;
+}
+.contact .icon{
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: #000;
+}
+.contact .info p{
+    font-size: 1em;
+}
+
+
+
+/* Contact Form Styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #378f9c;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+#contact-form button {
+    padding: 10px 15px;
+    background-color: #378f9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+.footer{
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: #3a6cf4;
+}
+.footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+.footer_chat{
+    background-color: #fff;
+    color: #000016;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.6em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+    .main h2{
+        font-size: 1em;
+    }
+    .main h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;  /*1em = 12px => fa hit khdmt b em fa sf kanbdt 3i defaylt*/
+    }
+
+    .main h2{
+        font-size: 0.8em;
+    }
+    .main h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+
+}
+
+
